@@ -9,8 +9,12 @@ The project contains two versions:
 - `news_insecure.py` shows an unsafe way to store an API key.
 - `news_secure.py` shows a safer way to load an API key from a `.env` file.
 
-Both versions use [NewsAPI](https://newsapi.org/) to request the latest
-Australian news headlines from `/v2/top-headlines?country=au`.
+Both versions use [NewsAPI](https://newsapi.org/) to request recent articles
+from Australian news websites using the `/v2/everything` endpoint.
+
+The request filters by Australian publisher domains such as `abc.net.au`,
+`news.com.au`, `smh.com.au`, and `9news.com.au`. This is more reliable for the
+classroom lesson than `country=au`, which can sometimes return an empty list.
 
 The code is deliberately kept small so the lesson can focus on the main
 concepts: making an API request, using an API key, and keeping secrets out of

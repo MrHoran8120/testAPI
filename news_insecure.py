@@ -22,7 +22,7 @@ import requests
 # Remove any real key before sharing or committing this file.
 NEWS_API_KEY = "d2af26197246403cb019f3c04ef9374f"
 
-NEWS_API_URL = "https://newsapi.org/v2/top-headlines"
+NEWS_API_URL = "https://newsapi.org/v2/everything"
 
 
 def get_api_key():
@@ -39,9 +39,13 @@ def fetch_headlines(api_key):
     1. Choose the API endpoint URL.
     2. Send parameters, including the API key.
     3. Receive JSON data from the server.
+
+    This example uses Australian news website domains because NewsAPI's
+    country=au top-headlines feed can sometimes return an empty list.
     """
     params = {
-        "country": "au",
+        "domains": "abc.net.au,news.com.au,smh.com.au,9news.com.au",
+        "sortBy": "publishedAt",
         "pageSize": 10,
         "apiKey": api_key,
     }
