@@ -20,7 +20,7 @@ import requests
 #
 # This approach is useful only as a classroom demonstration of what NOT to do.
 # Remove any real key before sharing or committing this file.
-NEWS_API_KEY = "d2af26197246403cb019f3c04ef9374f"
+NEWS_API_KEY = "Put your api key here, but don't commit it to GitHub!"
 
 NEWS_API_URL = "https://newsapi.org/v2/everything"
 
